@@ -1,16 +1,16 @@
 cmake_minimum_required(VERSION 2.8)
 
-project(Kroniax)
+project(Kroniax_Mapeditor)
 
 # Set options
 set(CMAKE_BUILD_TYPE Release CACHE STRING "Choose the type of build (Debug or Release)" FORCE)
 set(SFML_STATIC_LIBS FALSE CACHE BOOL "Choose whether SFML is linked statically or not.")
-set(KRONIAX_STATIC_STD_LIBS FALSE CACHE BOOL "Use statically linked standard/runtime libraries? This option must match the one used for SFML.")
+set(Kroniax_Mapeditor_STATIC_STD_LIBS FALSE CACHE BOOL "Use statically linked standard/runtime libraries? This option must match the one used for SFML.")
     
 # Make sure that the runtime library gets link statically
-if(KRONIAX_STATIC_STD_LIBS)
+if(Kroniax_Mapeditor_STATIC_STD_LIBS)
 	if(NOT SFML_STATIC_LIBS)
-		message("\n-> If you check KRONIAX_STATIC_STD_LIBS, you also need to check SFML_STATIC_LIBRARIES.")
+		message("\n-> If you check Kroniax_Mapeditor_STATIC_STD_LIBS, you also need to check SFML_STATIC_LIBRARIES.")
 		message("-> It would lead to multiple runtime environments which result in undefined behavior.\n")
 	elseif(WIN32 AND MSVC)
 		# Change all MSVC compiler flags to /MT
@@ -25,7 +25,7 @@ if(KRONIAX_STATIC_STD_LIBS)
 	endif()
 endif()
 
-# Kroniax mapeditor uses C++11 features
+# Kroniax_Mapeditor uses C++11 features
 if(CMAKE_COMPILER_IS_GNUCXX)
 	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 endif()
@@ -39,7 +39,7 @@ if(SFML_STATIC_LIBS)
 endif()
 
 # Find SFML
-find_package(SFML 2 COMPONENTS audio graphics window system network)
+find_package(SFML 2 COMPONENTS graphics window system)
 
 # Output an error if SFML wasn't found
 if(SFML_FOUND)
@@ -87,13 +87,13 @@ set(
 )
 
 # Tell CMake to build a executable 
-add_executable(Kroniax ${SOURCES})
+add_executable(Kroniax_Mapeditor ${SOURCES})
 
 # Link SFML
-target_link_libraries(Kroniax ${SFML_LIBRARIES})
+target_link_libraries(Kroniax_Mapeditor ${SFML_LIBRARIES})
 
 # Install executable
-install(TARGETS Kroniax
+install(TARGETS Kroniax_Mapeditor
 		RUNTIME DESTINATION .)
 
 # Install game data
