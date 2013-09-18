@@ -1,7 +1,7 @@
 Kroniax-Mapeditor
 =================
 
-The official source of the mapeditor of Kroniax, being developed by Alexander Weinrauch in C++ with SFML.
+The official source of the mapeditor of Kroniax(Version 0.7+), being developed by Alexander Weinrauch in C++ with SFML.
 
 Please read the license file!
 
