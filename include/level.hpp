@@ -27,6 +27,7 @@ class Level
 public:
 	Level(sf::RenderWindow &window);
 
+	void createNewLevel();
 	void reset();
 
 	bool load(const std::string &name);

@@ -34,6 +34,7 @@ class LevelEditor
 {
 public:
 	LevelEditor(sf::RenderWindow &window);
+	void init();
 
 	void keyInput(const sf::Event &event);
 	void mouseInput();
@@ -69,8 +70,6 @@ public:
 	void load(std::fstream &file);
 
 private:
-
-	void init();
 
 	void updateDisplay();
 	void updateTexts();

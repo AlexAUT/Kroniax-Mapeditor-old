@@ -42,6 +42,7 @@ void layer0(AwGui &gui, Level &level)
 		if(aw::MessageBoxYesNo("Creating new level", "Do you really want to create a new level?\n\nThe current level will be removed\nfrom the workspace"))
 		{
 			level.reset();
+			level.createNewLevel();
 		}
 	}
 	else if(gui.getButton(0, "save")->getClickState() == EventClickedType::released)
