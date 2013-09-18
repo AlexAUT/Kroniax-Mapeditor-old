@@ -2,6 +2,7 @@
 *.vcxproj
 *.filters
 *.dll
+data/levels
 
 # Compiled Object files
 *.slo
