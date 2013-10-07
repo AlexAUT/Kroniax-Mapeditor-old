@@ -21,7 +21,7 @@ void LevelLine::addColor(std::size_t yPos, int color)
 	}
 	else if(yPos < m_start)
 	{
-		for(std::size_t i = yPos; i < m_start-1; i++)
+		for(std::size_t i = 1; i < m_start-yPos; i++)
 		{
 			m_blocks.push_front(Block());
 		}
