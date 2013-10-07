@@ -125,7 +125,7 @@ bool Level::load(const std::string &name)
 					sstr >> start >> end;
 
 			
-					if(start < 10000 && end < 10000)
+					if(start < 100000 && end < 100000)
 					{
 						for(std::size_t i = start; i <= end; i++)
 						{
