@@ -506,7 +506,7 @@ void LevelEditor::updateTexts()
 
 void LevelEditor::save(std::fstream &file)
 {
-	file << "[Length]\n" << m_scriptManager.getSize() << "\n";
+	file << "[Length]\n" << m_lines.size() << "\n";
 	file << "///////////////////////////////////\n\n";
 	file << "[Scripts]\n";
 	
@@ -519,6 +519,16 @@ void LevelEditor::save(std::fstream &file)
 
 	file << "[/Scripts]\n\n\n";
 
+	file << "[Colors]\n";
+
+	for (auto &it : m_colors)
+	{
+		file << static_cast<int>(it.r) << " " << static_cast<int>(it.g) << " " << static_cast<int>(it.b) << "\n";
+	}
+
+	file << "[/Colors]\n\n";
+
+
 	file << "[Blocks]\n";
 
 	for(auto &it : m_lines)
@@ -526,25 +536,17 @@ void LevelEditor::save(std::fstream &file)
 		file << it.getStart() << " " << it.getEnd();
 		for(std::size_t i = 0; i < it.getSize(); i++)
 		{
-			file << " " << it.getColor(i) << " " << it.getCollisionType(i);
+			file << " " << it.getColor(i+it.getStart()) << " " << it.getCollisionType(i);
 		}
 		file << "\n";		
 	}
 
 	file << "[/Blocks]\n\n\n\n";
-
-	file << "[Colors]\n";
-
-	for(auto &it : m_colors)
-	{
-		file << static_cast<int>(it.r) << " " << static_cast<int>(it.g) << " " << static_cast<int>(it.b) << "\n";
-	}
-
-	file << "[/Colors]\n\n";
 }
 
 
 void LevelEditor::load(std::fstream &file)
 {
-
+	m_xOffset = 0;
+	m_yOffset = 0;
 }
