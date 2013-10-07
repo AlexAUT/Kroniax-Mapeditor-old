@@ -63,6 +63,8 @@ void layer0(AwGui &gui, Level &level)
 			else
 			{
 				aw::MessageBoxOK("Error", "Failed to load the level!");
+				level.reset();
+				level.createNewLevel();
 			}
 
 		}
