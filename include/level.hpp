@@ -1,4 +1,4 @@
-#ifndef LEVEL_HPP
+#ifndef LEVEL _HPP
 #define LEVEL_HPP
 
 #include <string>
@@ -11,13 +11,17 @@ struct Properties
 	std::string difficulty;
 	std::string startSpeed;
 	std::string startGravitation;
+	std::string startPositionX;
+	std::string startPositionY;
 
 	Properties():
 		name(""),
 		author("AlexAUT"),
 		difficulty("Easy"),
 		startSpeed("100"),
-		startGravitation("75")
+		startGravitation("75"),
+		startPositionX("5"),
+		startPositionY("5")
 	{}
 };
 

@@ -54,10 +54,15 @@ void initGui(AwGui &gui)
 	gui.addButton(2, "ng", 820, 350, 170, 35, topColor, botColor, "Startgravitation:");
 	gui.getButton(2, "ng")->setActive(false);
 
+	gui.addButton(2, "nss", 820, 400, 170, 35, topColor, botColor, "Startposition in tiles:");
+	gui.getButton(2, "nss")->setActive(false);
+
 	gui.addInputBox(2, "name", 895, 150, 200, 35, sf::Color::White, "");
 	gui.addInputBox(2, "author", 905, 200, 200,35, sf::Color::White, "AlexAUT");
 	gui.addInputBox(2, "startspeed", 955, 300, 100, 35, sf::Color::White, "100");
 	gui.addInputBox(2, "startgravitation", 1000, 350, 100, 35, sf::Color::White, "75");
+	gui.addInputBox(2, "startpositionX", 1000, 400, 80, 35, sf::Color::White, "5");
+	gui.addInputBox(2, "startpositionY", 1100, 400, 80, 35, sf::Color::White, "5");
 
 	gui.addDropDownMenu(2, "difficulty", 930, 250, 200, 35, sf::Color(164,164,164), sf::Color(164,164,164), "Easy");
 	gui.getDropDownMenu(2, "difficulty")->addEntry("Easy");

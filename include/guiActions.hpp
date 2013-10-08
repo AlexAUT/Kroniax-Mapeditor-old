@@ -80,6 +80,8 @@ void updateLevelProperties(AwGui &gui, Level &level)
 	level.getProperties().author = gui.getInputBox(2, "author")->getText();
 	level.getProperties().startSpeed = gui.getInputBox(2, "startspeed")->getText();
 	level.getProperties().startGravitation = gui.getInputBox(2, "startgravitation")->getText();
+	level.getProperties().startPositionX = gui.getInputBox(2, "startpositionX")->getText();
+	level.getProperties().startPositionY = gui.getInputBox(2, "startpositionY")->getText();
 }
 
 
@@ -329,5 +331,7 @@ void updateGuiAfterLoading(AwGui &gui, Level &level)
 	gui.getInputBox(2, "author")->setText(level.getProperties().author);
 	gui.getInputBox(2, "startspeed")->setText(level.getProperties().startSpeed);
 	gui.getInputBox(2, "startgravitation")->setText(level.getProperties().startGravitation);
+	gui.getInputBox(2, "startpositionX")->setText(level.getProperties().startPositionX);
+	gui.getInputBox(2, "startpositionY")->setText(level.getProperties().startPositionY);
 	gui.getDropDownMenu(2, "difficulty")->setText(level.getProperties().difficulty);
 }

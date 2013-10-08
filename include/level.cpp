@@ -41,6 +41,8 @@ bool Level::save()
 	file << m_properties.startSpeed << "\n";
 	file << "[Start Gravitation]\n";
 	file << m_properties.startGravitation << "\n";
+	file << "[Start Position]\n";
+	file << m_properties.startPositionX << " " << m_properties.startPositionY << "\n";
 	
 	m_levelEditor.save(file);
 
@@ -90,6 +92,13 @@ bool Level::load(const std::string &name)
 			std::string temp;
 			std::getline(file, temp);
 			m_properties.startGravitation = temp;
+		}
+		else if (line == "[Start Position]")
+		{
+			std::string temp;
+			std::getline(file, temp);
+			std::stringstream sstr(temp);
+			sstr >> m_properties.startPositionX >> m_properties.startPositionY;
 		}
 		else if(line == "[Scripts]")
 		{
