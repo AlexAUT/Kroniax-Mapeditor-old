@@ -536,7 +536,7 @@ void LevelEditor::save(std::fstream &file)
 		file << it.getStart() << " " << it.getEnd();
 		for(std::size_t i = 0; i < it.getSize(); i++)
 		{
-			file << " " << it.getColor(i+it.getStart()) << " " << it.getCollisionType(i);
+			file << " " << it.getColor(i+it.getStart()) << " " << it.getCollisionType(i+it.getStart());
 		}
 		file << "\n";		
 	}
