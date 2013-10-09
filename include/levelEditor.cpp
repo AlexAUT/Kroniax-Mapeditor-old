@@ -246,18 +246,16 @@ void LevelEditor::render()
 	}
 	else if(m_drawMode == DrawMode::scripts)
 	{
-		//Draw overall overlay
-		for(int i = 0; i < 32; i++)
+		//Draw scripts overlay
+		for(int i = m_xOffset; i < m_xOffset+32; i++)
 		{
-			int col = m_xOffset + i;
-
-			if(col == m_selectedXPos)
+			if(i == m_selectedXPos)
 				continue;
 
-			if(m_scriptManager.isScriptAtXPos(col))
+			if(m_scriptManager.isScriptAtXPos(i))
 			{
 				sf::RectangleShape overlay(sf::Vector2f(25,450));
-				overlay.setPosition(col*25, 0);
+				overlay.setPosition((i-m_xOffset)*25, 0);
 				overlay.setFillColor(sf::Color(255, 255, 0, 120));
 				m_window.draw(overlay);
 			}
