@@ -28,7 +28,7 @@ void Level::reset()
 
 bool Level::save()
 {
-	std::fstream file(("data/levels/"+m_properties.name+".cfg").c_str(), std::ios::out | std::ios::trunc);
+	std::fstream file(("data/levels/custom/"+m_properties.name+".cfg").c_str(), std::ios::out | std::ios::trunc);
 
 	file << "////////////////////////////\nLevelfile for Kroniax\n////////////////////////////\n\n\n";
 	file << "[Name]\n";
@@ -53,7 +53,7 @@ bool Level::save()
 
 bool Level::load(const std::string &name)
 {
-	std::fstream file(("data/levels/"+name+".cfg").c_str(), std::ios::in);
+	std::fstream file(("data/levels/custom/"+name+".cfg").c_str(), std::ios::in);
 
 	if(file.fail())
 	{
