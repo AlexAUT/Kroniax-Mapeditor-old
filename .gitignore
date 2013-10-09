@@ -2,7 +2,7 @@
 *.vcxproj
 *.filters
 *.dll
-data/levels/custom/*.cfg
+*.cfg
 
 # Compiled Object files
 *.slo
