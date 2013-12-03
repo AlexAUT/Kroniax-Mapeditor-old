@@ -257,14 +257,14 @@ void updateScriptInterface(AwGui &gui, LevelEditor &levelEditor)
 		gui.getDropDownMenu(4, "selectScript")->setText("Change gravitation");
 		gui.getDropDownMenu(4, "scriptType")->setText("Change gravitation");
 		gui.getButton(4, "displayFirst")->setText("Value");
-		gui.getButton(4, "displaySecond")->setText("Time");
+		gui.getButton(4, "displaySecond")->setText("Duration");
 		gui.getButton(4, "displayThird")->setText("Not used");
 		break;
 	case ScriptType::CHANGE_SPEED:
 		gui.getDropDownMenu(4, "selectScript")->setText("Change speed");
 		gui.getDropDownMenu(4, "scriptType")->setText("Change speed");
 		gui.getButton(4, "displayFirst")->setText("Value");
-		gui.getButton(4, "displaySecond")->setText("Time");
+		gui.getButton(4, "displaySecond")->setText("Duration");
 		gui.getButton(4, "displayThird")->setText("Not used");
 		break;
 	case ScriptType::CHECKPOINT:
@@ -277,7 +277,7 @@ void updateScriptInterface(AwGui &gui, LevelEditor &levelEditor)
 	case ScriptType::COLOR_INVERT:
 		gui.getDropDownMenu(4, "selectScript")->setText("Color invert");
 		gui.getDropDownMenu(4, "scriptType")->setText("Color invert");
-		gui.getButton(4, "displayFirst")->setText("Not used");
+		gui.getButton(4, "displayFirst")->setText("Duration");
 		gui.getButton(4, "displaySecond")->setText("Not used");
 		gui.getButton(4, "displayThird")->setText("Not used");
 		break;
@@ -292,21 +292,21 @@ void updateScriptInterface(AwGui &gui, LevelEditor &levelEditor)
 		gui.getDropDownMenu(4, "selectScript")->setText("Flickering");
 		gui.getDropDownMenu(4, "scriptType")->setText("Flickering");
 		gui.getButton(4, "displayFirst")->setText("Strength");
-		gui.getButton(4, "displaySecond")->setText("Time");
+		gui.getButton(4, "displaySecond")->setText("Duration");
 		gui.getButton(4, "displayThird")->setText("Not used");
 		break;
 	case ScriptType::ROLL_CAMERA:
 		gui.getDropDownMenu(4, "selectScript")->setText("Roll camera");
 		gui.getDropDownMenu(4, "scriptType")->setText("Roll camera");
 		gui.getButton(4, "displayFirst")->setText("Angle");
-		gui.getButton(4, "displaySecond")->setText("Time");
+		gui.getButton(4, "displaySecond")->setText("Duration");
 		gui.getButton(4, "displayThird")->setText("Not used");
 		break;
 	case ScriptType::ZOOM:
 		gui.getDropDownMenu(4, "selectScript")->setText("Zoom");
 		gui.getDropDownMenu(4, "scriptType")->setText("Zoom");
 		gui.getButton(4, "displayFirst")->setText("Factor");
-		gui.getButton(4, "displaySecond")->setText("Time");
+		gui.getButton(4, "displaySecond")->setText("Duration");
 		gui.getButton(4, "displayThird")->setText("Not used");
 		break;
 	default: 
