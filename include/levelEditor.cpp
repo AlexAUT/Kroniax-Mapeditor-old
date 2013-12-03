@@ -511,8 +511,8 @@ void LevelEditor::save(std::fstream &file)
 	for(std::size_t i = 0; i < m_scriptManager.getSize(); i++)
 	{
 		Script *temp = m_scriptManager.getScript(i);
-
-		file << temp->type << " " << temp->xPos << " " << temp->first << " " << temp->second << " " << temp->third << "\n"; 
+		std::cout << temp->second << std::endl;
+		file << temp->type << " " << temp->xPos << " " << static_cast<float>(temp->first) << " " << static_cast<float>(temp->second) << " " << static_cast<float>(temp->third) << "\n";
 	}
 
 	file << "[/Scripts]\n\n\n";

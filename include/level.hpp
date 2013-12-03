@@ -1,4 +1,4 @@
-#ifndef LEVEL _HPP
+#ifndef LEVEL_HPP
 #define LEVEL_HPP
 
 #include <string>

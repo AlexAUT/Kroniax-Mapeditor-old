@@ -111,7 +111,8 @@ bool Level::load(const std::string &name)
 				else
 				{
 					std::stringstream sstr(line);
-					int type, xPos, first, second, third;
+					int type, xPos;
+					float first, second, third;
 					sstr >> type >> xPos >> first >> second >> third;
 					m_levelEditor.addScript(Script(ScriptType(type), xPos, first, second, third));
 				}

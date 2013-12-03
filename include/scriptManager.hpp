@@ -27,7 +27,7 @@ struct Script
 
 	Script(ScriptType pType, int pxPos) :
 		type(pType), xPos(pxPos) {}
-	Script(ScriptType pType, int pxPos, int pFirst, int pSecond, int pThird):
+	Script(ScriptType pType, int pxPos, float pFirst, float pSecond, float pThird):
 		type(pType), xPos(pxPos), first(pFirst), second(pSecond), third(pThird) {}
 };
 

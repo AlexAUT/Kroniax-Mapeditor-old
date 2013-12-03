@@ -246,7 +246,7 @@ void updateScriptInterface(AwGui &gui, LevelEditor &levelEditor)
 {
 	if(!levelEditor.getSelectedScript())
 		return;
-
+	std::cout << levelEditor.getSelectedScript()->second << std::endl;
 	gui.getInputBox(4, "scriptFirst")->setText(std::string(aw::conv::ToString(levelEditor.getSelectedScript()->first)));
 	gui.getInputBox(4, "scriptSecond")->setText(std::string(aw::conv::ToString(levelEditor.getSelectedScript()->second)));
 	gui.getInputBox(4, "scriptThird")->setText(std::string(aw::conv::ToString(levelEditor.getSelectedScript()->third)));
