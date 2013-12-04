@@ -390,14 +390,11 @@ std::vector<std::string> LevelEditor::getScriptNames()
 			case ScriptType::CHANGE_GRAVITATION:
 				names.push_back("Change gravitation");
 				break;
-			case ScriptType::COLOR_INVERT:
-				names.push_back("Color invert");
+			case ScriptType::CAMERA_OFFSET:
+				names.push_back("Camera Offset");
 				break;
-			case ScriptType::COLOR_OVERLAY:
-				names.push_back("Color overlay");
-				break;
-			case ScriptType::FLICKERING:
-				names.push_back("Flickering");
+			case ScriptType::SHAKE_CAMERA:
+				names.push_back("Shake camera");
 				break;
 			case ScriptType::ROLL_CAMERA:
 				names.push_back("Roll camera");

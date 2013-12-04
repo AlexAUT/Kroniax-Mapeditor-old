@@ -219,9 +219,8 @@ void layer4(AwGui &gui, LevelEditor &levelEditor)
 			case 2: levelEditor.getSelectedScript()->type = ScriptType::CHANGE_GRAVITATION; break;
 			case 3: levelEditor.getSelectedScript()->type = ScriptType::ROLL_CAMERA; break;
 			case 4: levelEditor.getSelectedScript()->type = ScriptType::ZOOM; break;
-			case 5: levelEditor.getSelectedScript()->type = ScriptType::FLICKERING; break;
-			case 6: levelEditor.getSelectedScript()->type = ScriptType::COLOR_INVERT; break;
-			case 7: levelEditor.getSelectedScript()->type = ScriptType::COLOR_OVERLAY; break;
+			case 5: levelEditor.getSelectedScript()->type = ScriptType::CAMERA_OFFSET; break;
+			case 6: levelEditor.getSelectedScript()->type = ScriptType::SHAKE_CAMERA; break;
 			default: levelEditor.getSelectedScript()->type = ScriptType::NOTHING; break;
 			}
 
@@ -274,26 +273,18 @@ void updateScriptInterface(AwGui &gui, LevelEditor &levelEditor)
 		gui.getButton(4, "displaySecond")->setText("Not used");
 		gui.getButton(4, "displayThird")->setText("Not used");
 		break;
-	case ScriptType::COLOR_INVERT:
-		gui.getDropDownMenu(4, "selectScript")->setText("Color invert");
-		gui.getDropDownMenu(4, "scriptType")->setText("Color invert");
-		gui.getButton(4, "displayFirst")->setText("Duration");
-		gui.getButton(4, "displaySecond")->setText("Not used");
-		gui.getButton(4, "displayThird")->setText("Not used");
+	case ScriptType::CAMERA_OFFSET:
+		gui.getDropDownMenu(4, "selectScript")->setText("Camera offset");
+		gui.getDropDownMenu(4, "scriptType")->setText("Camera offset");
+		gui.getButton(4, "displayFirst")->setText("X val");
+		gui.getButton(4, "displaySecond")->setText("Y val");
+		gui.getButton(4, "displayThird")->setText("Duration");
 		break;
-	case ScriptType::COLOR_OVERLAY:
-		gui.getDropDownMenu(4, "selectScript")->setText("Color overlay");
-		gui.getDropDownMenu(4, "scriptType")->setText("Color overlay");
-		gui.getButton(4, "displayFirst")->setText("Red");
-		gui.getButton(4, "displaySecond")->setText("Green");
-		gui.getButton(4, "displayThird")->setText("Blue");
-		break;
-	case ScriptType::FLICKERING:
-		gui.getDropDownMenu(4, "selectScript")->setText("Flickering");
-		gui.getDropDownMenu(4, "scriptType")->setText("Flickering");
+	case ScriptType::SHAKE_CAMERA:
+		gui.getDropDownMenu(4, "selectScript")->setText("Shake camera");
+		gui.getDropDownMenu(4, "scriptType")->setText("Shake camera");
 		gui.getButton(4, "displayFirst")->setText("Strength");
 		gui.getButton(4, "displaySecond")->setText("Duration");
-		gui.getButton(4, "displayThird")->setText("Not used");
 		break;
 	case ScriptType::ROLL_CAMERA:
 		gui.getDropDownMenu(4, "selectScript")->setText("Roll camera");

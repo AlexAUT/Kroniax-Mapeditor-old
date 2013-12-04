@@ -132,9 +132,8 @@ void initGui(AwGui &gui)
 	gui.getDropDownMenu(4, "scriptType")->addEntry("Change gravitation");
 	gui.getDropDownMenu(4, "scriptType")->addEntry("Flip camera");
 	gui.getDropDownMenu(4, "scriptType")->addEntry("Zoom");
-	gui.getDropDownMenu(4, "scriptType")->addEntry("Flickering");
-	gui.getDropDownMenu(4, "scriptType")->addEntry("Color invert");
-	gui.getDropDownMenu(4, "scriptType")->addEntry("Color overlay");
+	gui.getDropDownMenu(4, "scriptType")->addEntry("Camera offset");
+	gui.getDropDownMenu(4, "scriptType")->addEntry("Shake camera");
 
 	gui.addButton(4, "displayFirst", 820, 350, 100, 35, topColor, botColor, "First: ");
 	gui.getButton(4, "displayFirst")->setActive(false);
