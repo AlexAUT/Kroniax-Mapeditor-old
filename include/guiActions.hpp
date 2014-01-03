@@ -221,6 +221,8 @@ void layer4(AwGui &gui, LevelEditor &levelEditor)
 			case 4: levelEditor.getSelectedScript()->type = ScriptType::ZOOM; break;
 			case 5: levelEditor.getSelectedScript()->type = ScriptType::CAMERA_OFFSET; break;
 			case 6: levelEditor.getSelectedScript()->type = ScriptType::SHAKE_CAMERA; break;
+			case 7: levelEditor.getSelectedScript()->type = ScriptType::TILT_X; break;
+			case 8: levelEditor.getSelectedScript()->type = ScriptType::TILT_Y; break;
 			default: levelEditor.getSelectedScript()->type = ScriptType::NOTHING; break;
 			}
 
@@ -298,6 +300,20 @@ void updateScriptInterface(AwGui &gui, LevelEditor &levelEditor)
 		gui.getDropDownMenu(4, "scriptType")->setText("Zoom");
 		gui.getButton(4, "displayFirst")->setText("Factor");
 		gui.getButton(4, "displaySecond")->setText("Duration");
+		gui.getButton(4, "displayThird")->setText("Not used");
+		break;
+	case ScriptType::TILT_X:
+		gui.getDropDownMenu(4, "selectScript")->setText("Tilt X");
+		gui.getDropDownMenu(4, "scriptType")->setText("Tilt X");
+		gui.getButton(4, "displayFirst")->setText("Duration");
+		gui.getButton(4, "displaySecond")->setText("Not used");
+		gui.getButton(4, "displayThird")->setText("Not used");
+		break;
+	case ScriptType::TILT_Y:
+		gui.getDropDownMenu(4, "selectScript")->setText("Tilt Y");
+		gui.getDropDownMenu(4, "scriptType")->setText("Tilt Y");
+		gui.getButton(4, "displayFirst")->setText("Duration");
+		gui.getButton(4, "displaySecond")->setText("Not used");
 		gui.getButton(4, "displayThird")->setText("Not used");
 		break;
 	default: 

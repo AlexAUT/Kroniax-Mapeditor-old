@@ -42,6 +42,7 @@ public:
 	void addScript(const Script &script);
 
 	void removeScript(std::size_t index);
+	void clear();
 
 	std::size_t getSize();
 	Script *getScript(std::size_t index);

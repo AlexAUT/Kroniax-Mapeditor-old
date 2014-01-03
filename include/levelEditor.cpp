@@ -312,6 +312,7 @@ void LevelEditor::reset()
 	init();	
 	m_lines.clear();
 	m_colors.clear();
+	m_scriptManager.clear();
 }
 
 
@@ -401,6 +402,12 @@ std::vector<std::string> LevelEditor::getScriptNames()
 				break;
 			case ScriptType::ZOOM:
 				names.push_back("Zoom");
+				break;
+			case ScriptType::TILT_X:
+				names.push_back("Tilt X");
+				break;
+			case ScriptType::TILT_Y:
+				names.push_back("Tilt Y");
 				break;
 			default:
 				names.push_back("No type selected");

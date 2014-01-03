@@ -134,6 +134,8 @@ void initGui(AwGui &gui)
 	gui.getDropDownMenu(4, "scriptType")->addEntry("Zoom");
 	gui.getDropDownMenu(4, "scriptType")->addEntry("Camera offset");
 	gui.getDropDownMenu(4, "scriptType")->addEntry("Shake camera");
+	gui.getDropDownMenu(4, "scriptType")->addEntry("Tilt X");
+	gui.getDropDownMenu(4, "scriptType")->addEntry("Tilt Y");
 
 	gui.addButton(4, "displayFirst", 820, 350, 100, 35, topColor, botColor, "First: ");
 	gui.getButton(4, "displayFirst")->setActive(false);
