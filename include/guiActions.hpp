@@ -140,9 +140,9 @@ void layer3(AwGui &gui, LevelEditor &levelEditor)
 
 	switch(gui.getDropDownMenu(3, "mode")->getClickedEntryAsInt())
 	{
-	case 0: levelEditor.setDrawingMode(DrawMode::opticalBlock); break;
-	case 1: levelEditor.setDrawingMode(DrawMode::collisionBlock); break;
-	case 2: levelEditor.setDrawingMode(DrawMode::finishBlock); break;
+	case 0: levelEditor.setDrawingMode(DrawMode::opticalBlock); gui.getDropDownMenu(3, "mode")->setText("Optical block"); break;
+	case 1: levelEditor.setDrawingMode(DrawMode::collisionBlock); gui.getDropDownMenu(3, "mode")->setText("Collision block"); break;
+	case 2: levelEditor.setDrawingMode(DrawMode::finishBlock); gui.getDropDownMenu(3, "mode")->setText("Finish block"); break;
 	default: break;
 	}
 
