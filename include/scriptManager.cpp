@@ -28,6 +28,11 @@ void ScriptManager::removeScript(std::size_t index)
 	}
 }
 
+void ScriptManager::clear()
+{
+	m_scripts.clear();
+}
+
 std::size_t ScriptManager::getSize()
 {
 	return m_scripts.size();

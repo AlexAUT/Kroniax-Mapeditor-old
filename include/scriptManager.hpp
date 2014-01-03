@@ -13,7 +13,9 @@ enum ScriptType
 	ROLL_CAMERA,
 	ZOOM,
 	CAMERA_OFFSET,
-	SHAKE_CAMERA
+	SHAKE_CAMERA,
+	TILT_X,
+	TILT_Y
 };
 
 struct Script 

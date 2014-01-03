@@ -60,6 +60,9 @@ bool Level::load(const std::string &name)
 		return false;
 	}
 
+	//Reset the levelEditor
+	m_levelEditor.reset();
+
 	std::string line;
 	while(std::getline(file, line))
 	{
