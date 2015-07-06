@@ -3,11 +3,11 @@
 
 #include <iostream>
 #include <SFML/Graphics.hpp>
-#include "Layer.hpp"
+#include "layer.hpp"
 
-#include "Button.hpp"
-#include "InputBox.hpp"
-#include "DropDownMenu.hpp"
+#include "button.hpp"
+#include "inputBox.hpp"
+#include "dropDownMenu.hpp"
 
 class AwGui
 {

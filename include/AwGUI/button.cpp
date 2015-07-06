@@ -1,6 +1,6 @@
 #include <SFML/Graphics.hpp>
 
-#include "../../include/AwGUI/Button.hpp"
+#include "../../include/AwGUI/button.hpp"
 
 #include <iostream>
 
