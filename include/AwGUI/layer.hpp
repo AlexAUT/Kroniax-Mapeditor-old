@@ -3,10 +3,10 @@
 
 #include <SFML/Graphics.hpp>
 
-#include "Button.hpp"
-#include "InputBox.hpp"
-#include "Panel.hpp"
-#include "DropDownMenu.hpp"
+#include "button.hpp"
+#include "inputBox.hpp"
+#include "panel.hpp"
+#include "dropDownMenu.hpp"
 
 class Layer
 {
